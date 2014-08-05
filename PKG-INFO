@@ -1,0 +1,30 @@
+Metadata-Version: 1.0
+Name: alteracloud
+Version: 0.1.0
+Summary: Client library for Altera Cloud.
+Home-page: https://cloud.altera.com/developer/
+Author: Robert Romano
+Author-email: rromano@altera.com
+License: MIT
+Download-URL: https://cloud.altera.com/dashboard/download/alteracloud.tar.gz
+Description: 
+
+The HTTP client library ``alteracloud`` allows users to interface with Altera Cloud services.
+
+**Sweeps**
+  Submit parallel computation jobs and monitor them.
+ 
+
+**Notifications**
+  Register local Quartus compilations for tracking and email or push notifications from Altera's server.
+
+                        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Beta
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
