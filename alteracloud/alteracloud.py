@@ -75,6 +75,7 @@ import json
 import socket
 import requests
 import urlparse
+import urllib
 
 
 class ConnectionError(Exception):
@@ -121,13 +122,17 @@ class RequestsBase(object):
     def request_patch(self, url, data=None):
         return self.request("patch", url, data=data)
 
-    def request_get(self, url):
+    def request_get(self, url, params=None):
+        if params:
+            query_string = urllib.urlencode(params)
+            url = url + "?" + query_string
+
         return self.request("get", url, data=None)
 
     def request_delete(self, url):
         return self.request("delete", url, data=None)
 
-    def request(self, method, url, data=None):
+    def request(self, method, url, data=None, params=None):
         self.set_headers()
         fn = getattr(requests, method)
 

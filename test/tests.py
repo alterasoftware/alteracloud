@@ -9,9 +9,13 @@ import unittest
 import json
 import os
 from requests.compat import urljoin
+import requests
+from bson.objectid import ObjectId
+import urlparse
+from uuid import uuid4
 
 import alteracloud
-
+from alteracloud.qor import *
 
 # Test server for HTTP to replicate 
 HTTPBIN = os.environ.get('HTTPBIN_URL', 'http://httpbin.org/')
@@ -34,6 +38,15 @@ class ApiTests(unittest.TestCase):
         c = alteracloud.AlteraApiConnection(self.httpbin('get'))
         resp, content = c.request_get('')
         self.assertEqual(resp.status, 200)
+
+        # Test get with query params
+        query_params = {'key1':'value1', 'key2':'value2'}
+        resp, content = c.request_get('', params=query_params)
+        self.assertEqual(resp.status, 200)
+        # Make sure the url is correct
+        qs = resp.url.split("?", 1)[1]
+        # Since the encoding order appears to be random
+        self.assertTrue(qs in ["key1=value1&key2=value2", "key2=value2&key1=value1"])
 
     def test_post(self):
         data = {'foo':'bar'}
@@ -72,8 +85,6 @@ class ApiTests(unittest.TestCase):
     def test_valid_login(self):
         c = alteracloud.AlteraApiConnection(self.altera_server)
         self.assertTrue(c.login("testuser", "testpass"))
-
-                       
 
 if __name__ == '__main__':
     unittest.main()
