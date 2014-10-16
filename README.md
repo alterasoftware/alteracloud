@@ -1,4 +1,4 @@
-![Build Status](https://secure.travis-ci.org/alterasoftware/alteracloud.png?branch=master)
+[![Build Status](https://secure.travis-ci.org/alterasoftware/alteracloud.png?branch=master)](https://travis-ci.org/alterasoftware/alteracloud)
 
 # README #
 
