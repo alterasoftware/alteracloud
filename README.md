@@ -1,6 +1,7 @@
 # README #
 
-This is the Altera Cloud `alteracloud` package for using the REST API on the https://cloud.altera.com server.
+This is the Altera Cloud `alteracloud` package for using the REST API
+on the https://cloud.altera.com server.
 
 
 ### How do I develop for this? ###

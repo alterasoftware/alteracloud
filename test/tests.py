@@ -15,7 +15,6 @@ import urlparse
 from uuid import uuid4
 
 import alteracloud
-from alteracloud.qor import *
 
 # Test server for HTTP to replicate 
 HTTPBIN = os.environ.get('HTTPBIN_URL', 'http://httpbin.org/')

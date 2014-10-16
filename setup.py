@@ -55,7 +55,7 @@ class Tox(TestCommand):
         sys.exit(errcode)
 
 setup(
-    name = 'alteracloud-api',
+    name = 'alteracloud',
     version = alteracloud.__version__,
     url = 'https://cloud.altera.com/developer/',
     license = 'MIT',    
@@ -65,7 +65,6 @@ setup(
         'requests>=2.2.1',
         'py>=1.4.20',       
         'tox>=1.7.1',
-        #'pytest>=2.5.2',       
         'virtualenv>=1.11.4',
         'wsgiref>=0.1.2',
     ],
@@ -76,12 +75,12 @@ setup(
     packages = ['alteracloud'],
     include_package_data = True,
     platforms = 'any',
-    test_suite = 'altearcloud.test.tests',
+    test_suite = 'alteracloud.test.tests',
     classifiers = [
         'Programming Language :: Python',
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',       
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)',
