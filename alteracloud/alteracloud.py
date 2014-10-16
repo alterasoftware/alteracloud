@@ -184,14 +184,14 @@ class AlteraApiConnection(Base):
             try:
                 data = json.loads(content)
             except json.JSONDecodeError as e:
-                print content
-                print str(e)
+                print(content)
+                print(str(e))
                 return False
             self.token = data.get('token')
             if self.token:
                 return True
         else:
-            print content
+            print(content)
         return False   
 
     def set_headers(self):
