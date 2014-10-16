@@ -1,6 +1,4 @@
-
-.. image:: https://secure.travis-ci.org/alterasoftware/alteracloud.png?branch=master
-    :alt: Build Status
+![Build Status](https://secure.travis-ci.org/alterasoftware/alteracloud.png?branch=master)
 
 # README #
 
