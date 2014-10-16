@@ -1,13 +1,18 @@
 language: python
 
+env:
+  - TOX_ENV=py26
+  - TOX_ENV=py27
+  - TOX_ENV=py33
+
 python:
   - 2.7
   - 3.3
 
 install:
-  - pip install -q requests
+  - pip install -r requirements --use-mirrors
 
 script:
-  - tox
+  - tox -e $TOX_ENV
 
 
