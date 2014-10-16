@@ -10,9 +10,6 @@ import json
 import os
 from requests.compat import urljoin
 import requests
-from bson.objectid import ObjectId
-import urlparse
-from uuid import uuid4
 
 import alteracloud
 
