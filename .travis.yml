@@ -7,5 +7,7 @@ python:
 install:
   - pip install -q requests
 
+script:
+	tox
 
 
