@@ -177,13 +177,13 @@ class AlteraApiConnection(Base):
         url = resource
         try:
             resp, content = self.request_post(url, form)
-        except socket.error, e:
+        except socket.error as e:
             raise ConnectionError("could not connect to server: " + str(e), url=url)
 
         if resp.status == 200:
             try:
                 data = json.loads(content)
-            except json.JSONDecodeError, e:
+            except json.JSONDecodeError as e:
                 print content
                 print str(e)
                 return False
