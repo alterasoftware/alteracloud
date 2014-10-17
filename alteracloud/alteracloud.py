@@ -74,8 +74,12 @@ troubleshoot and solve common technical problems.
 import json
 import socket
 import requests
-import urlparse
 import urllib
+
+try:
+    from urlparse import urljoin
+except ImportError:
+    from urllib.parse import urljoin
 
 
 class ConnectionError(Exception):
@@ -137,7 +141,7 @@ class RequestsBase(object):
         fn = getattr(requests, method)
 
         if not url.startswith("http"):
-            url = urlparse.urljoin(self.base_url, url)
+            url = urljoin(self.base_url, url)
         
         if data:
             if self.headers.get('Content-type', '').endswith("/json"):
