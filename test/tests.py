@@ -49,21 +49,21 @@ class ApiTests(unittest.TestCase):
         c = alteracloud.AlteraApiConnection(self.httpbin('post'))
         resp, content = c.request_post('', data=data)
         self.assertEqual(resp.status, 200) 
-        self.assertEqual(json.loads(content)['json'], data)
+        self.assertEqual(json.loads(content.decode())['json'], data)
 
     def test_put(self):
         data = {'foo':'bar'}
         c = alteracloud.AlteraApiConnection(self.httpbin('put'))
         resp, content = c.request_put('', data=data)
         self.assertEqual(resp.status, 200) 
-        self.assertEqual(json.loads(content)['json'], data)     
+        self.assertEqual(json.loads(content.decode())['json'], data)     
 
     def test_patch(self):
         data = {'foo':'bar'}
         c = alteracloud.AlteraApiConnection(self.httpbin('patch'))
         resp, content = c.request_patch('', data=data)
         self.assertEqual(resp.status, 200) 
-        self.assertEqual(json.loads(content)['json'], data)     
+        self.assertEqual(json.loads(content.decode())['json'], data)     
 
     def test_delete(self):
         c = alteracloud.AlteraApiConnection(self.httpbin('delete'))
