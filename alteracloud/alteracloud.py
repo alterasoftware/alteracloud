@@ -1,35 +1,56 @@
-"""
+﻿"""
 .. module:: alteracloud
    :platform: Unix, Windows
-      :synopsis: Python class interface to the Altera Cloud REST API.
+   :synopsis: Python class interface to the Altera Cloud REST API.
       
-This source code is  pursuant to the following license agreement
-(BY VIEWING AND USING THIS SCRIPT, YOU AGREE TO THE
-FOLLOWING): Copyright (c) 2014-2015 Altera Corporation, San Jose,
-California, USA.  Permission is hereby granted, free of
-charge, to any person obtaining a copy of this software and
-associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute,
-sublicense, and/or sell copies of the Software, and to permit
-persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Copyright (C) 2014-2015 Altera Corporation, San Jose, California, USA.
+All rights reserved.
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+This source code is made available pursuant to the following license
+agreement (“Agreement”).
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+BY ACCESSING, COPYING, INSTALLING OR USING THIS SOFTWARE IN SOURCE
+CODE OR BINARY FORM, YOU AGREE TO BE BOUND BY THE FOLLOWING TERMS AND
+CONDITIONS:
 
-This agreement shall be governed in all respects by the laws of
-the State of California and by the laws of the United States of
-America.
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files
+(collectively, the "Software"), to use the Software for any purpose
+without restriction, including the right to copy, modify, merge,
+publish, distribute, prepare derivatives of, sublicense, and otherwise
+use the Software alone or in any derivative version, copies of the
+Software, provided that the above copyright notice appears in all
+copies or portions of the Software, and this license is retained in
+the Software documentation, whether alone or in any derivative
+version.  Additionally, the Altera Corporation name shall not be used
+in any advertising or publicity pertaining to the distribution of the
+Software without the prior written permission of Altera.
+
+ALTERA IS PROVIDING THE SOFTWARE "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT.   IN NO EVENT SHALL ALTERA OR THE AUTHORS OF THE 
+SOFTWARE BE LIABLE TO YOU OR ANY OTHER USER OF THE SOFTWARE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL  DAMAGES OR 
+LOSSES WHATSOEVER AS A RESULT OF USING, MODIFYING, OR DISTRIBUTING THE 
+SOFTWARE OR ANY DERIVATIVES THEREOF, WHETHER IN AN ACTION OR CLAIM OF 
+CONTRACT, NEGLIGENCE, TORT OR OTHERWISE, ARISING
+FROM  OR IN CONNECTION WITH THE SOFTWARE, ITS PERFORMANCE OR ITS  USE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF THE OCCURRENCE OF SUCH DAMAGES OR 
+LOSSES ..
+
+
+The license granted above will terminate automatically upon a breach
+of its terms and conditions.
+
+This agreement shall be governed by and interpreted in all respects by
+the laws of the State of California, United States of America, but
+excluding its conflict of laws provisions.  Nothing in this Agreement
+shal be deemed to create a relationship or agency, partnership or
+joint venture between you and Altera.  This Agreement does not grant
+any permission to use any Altera trademark, logo, trade name or
+service mark, for any reason, including to endorse or promote your
+products or service, or the products and services of any third party.
 
 CONTACTING ALTERA
 
@@ -69,7 +90,6 @@ Altera.com account on the mySupport web site.
 The Troubleshooters web site provides interactive tools to
 troubleshoot and solve common technical problems.
 """
-
 
 import json
 import socket
