@@ -94,12 +94,13 @@ troubleshoot and solve common technical problems.
 import json
 import socket
 import requests
-import urllib
 
 try:
     from urlparse import urljoin
+    from urllib import urlencode
 except ImportError:
     from urllib.parse import urljoin
+    from urllib.parse import urlencode
 
 
 class ConnectionError(Exception):
@@ -148,7 +149,7 @@ class RequestsBase(object):
 
     def request_get(self, url, params=None):
         if params:
-            query_string = urllib.urlencode(params)
+            query_string = urlencode(params)
             url = url + "?" + query_string
 
         return self.request("get", url, data=None)
