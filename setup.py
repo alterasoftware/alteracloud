@@ -62,11 +62,10 @@ setup(
     author = 'Robert Romano',
     tests_require = ['tox'],
     install_requires = [
-        'requests>=2.2.1',
-        'py>=1.4.20',       
+        'requests',
+        'py>=1.4.20',    
         'tox>=1.7.1',
         'virtualenv>=1.11.4',
-        'wsgiref>=0.1.2',
     ],
     cmdclass = {'test': Tox},
     author_email = 'rromano@altera.com',
