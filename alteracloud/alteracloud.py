@@ -207,16 +207,16 @@ class AlteraApiConnection(Base):
 
         if resp.status == 200:
             try:
-                data = json.loads(content)
+                data = json.loads(content.decode())
             except json.JSONDecodeError as e:
-                print(content)
+                print(content.decode())
                 print(str(e))
                 return False
             self.token = data.get('token')
             if self.token:
                 return True
         else:
-            print(content)
+            print(content.decode())
         return False   
 
     def set_headers(self):
